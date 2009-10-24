@@ -21,3 +21,8 @@ task :gemspec do
     f.write gem_spec.to_yaml
   end
 end
+
+desc "Test"
+task :test do
+  require File.join(File.dirname(__FILE__), 'tests', 'alchemist_test')
+end
