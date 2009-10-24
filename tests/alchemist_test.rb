@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'test/unit'
 require 'shoulda'
-require '../lib/alchemist'
+require File.join(File.dirname(__FILE__), '..', 'lib', 'alchemist')
 
 class AlchemistTest < Test::Unit::TestCase
   
