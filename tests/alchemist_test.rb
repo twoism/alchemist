@@ -5,15 +5,13 @@ require '../lib/alchemist'
 class AlchemistTest < Test::Unit::TestCase
   @conversions = {"meters-miles"=> 0.000621371192237334 }
   context "Testing Alchemist Distance Units" do
-    @table = Alchemist::conversion_table[:distance] 
-    #@table = {:meters => 1.0, :miles => 1609.344}
-    
+    @distance_table = Alchemist::conversion_table[:distance] 
     setup do
       @conversions = {"meters-miles"=> 0.000621371192237334 }
     end
     
-    @table.keys.each do |from|
-      @table.keys.each do |to|
+    @distance_table.keys.each do |from|
+      @distance_table.keys.each do |to|
         unless from == to
           should "convert #{from} to #{to}" do  
   
